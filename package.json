@@ -1,0 +1,16 @@
+{
+  "name": "ea-clone",
+  "version": "1.0.0",
+  "description": "A Pen created on CodePen.io. Original URL: [https://codepen.io/rajeshv-alluri/pen/eYEOMmP](https://codepen.io/rajeshv-alluri/pen/eYEOMmP).",
+  "main": "dist/script.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "Rajesh Varma Alluri",
+  "license": "ISC",
+  "homepage": "https://RajeshV-Alluri.github.io/EA-Clone",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

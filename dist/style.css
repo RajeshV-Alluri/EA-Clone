@@ -1,0 +1,1242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.user-navigation {
+  background-color: #161616;
+  height: 2.5em;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.user-navigation .profile, .user-navigation .help, .user-navigation .logo {
+  z-index: 1021;
+}
+.user-navigation .profile svg, .user-navigation .help svg, .user-navigation .logo svg {
+  height: 1.2em;
+  width: 2em;
+  cursor: pointer;
+  margin-right: 2.5em;
+  fill: #a3a3a3;
+}
+.user-navigation .profile svg:hover, .user-navigation .help svg:hover, .user-navigation .logo svg:hover {
+  fill: #fff;
+}
+.user-navigation .profile .activeSVG, .user-navigation .help .activeSVG, .user-navigation .logo .activeSVG {
+  fill: #fff;
+}
+.user-navigation .profile .activeSVG + div, .user-navigation .help .activeSVG + div, .user-navigation .logo .activeSVG + div {
+  margin-top: 0;
+  fill: #fff;
+  z-index: 5;
+}
+.user-navigation .profile .nonActiveSVG + div, .user-navigation .help .nonActiveSVG + div, .user-navigation .logo .nonActiveSVG + div {
+  margin-top: -68vh;
+  z-index: 4;
+}
+.user-navigation .profile .profile-info, .user-navigation .help .profile-info, .user-navigation .logo .profile-info {
+  position: fixed;
+  background-color: #161616;
+  height: 60vh;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -68vh;
+  transition: margin-top 0.4s linear;
+}
+.user-navigation .profile .profile-info a, .user-navigation .help .profile-info a, .user-navigation .logo .profile-info a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  margin: 0 5em;
+}
+.user-navigation .profile .profile-info a:hover, .user-navigation .help .profile-info a:hover, .user-navigation .logo .profile-info a:hover {
+  margin-bottom: 1em;
+}
+.user-navigation .profile .profile-info a img, .user-navigation .help .profile-info a img, .user-navigation .logo .profile-info a img {
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+}
+.user-navigation .profile .help-info, .user-navigation .help .help-info, .user-navigation .logo .help-info {
+  position: fixed;
+  position: fixed;
+  background-color: #161616;
+  height: 60vh;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin-top: -68vh;
+  transition: margin-top 0.4s linear;
+}
+.user-navigation .profile .help-info .help-articles, .user-navigation .help .help-info .help-articles, .user-navigation .logo .help-info .help-articles {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1em;
+}
+.user-navigation .profile .help-info .help-articles a, .user-navigation .help .help-info .help-articles a, .user-navigation .logo .help-info .help-articles a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 3em;
+}
+.user-navigation .profile .help-info .help-articles a:hover, .user-navigation .help .help-info .help-articles a:hover, .user-navigation .logo .help-info .help-articles a:hover {
+  margin: 0 3em;
+  margin-bottom: 0.5em;
+}
+.user-navigation .profile .help-info .help-articles a img, .user-navigation .help .help-info .help-articles a img, .user-navigation .logo .help-info .help-articles a img {
+  height: 2em;
+  width: 2em;
+  margin-bottom: 0.5em;
+}
+.user-navigation .profile .help-info a, .user-navigation .help .help-info a, .user-navigation .logo .help-info a {
+  text-decoration: none;
+  color: #ff1e3c;
+}
+.user-navigation .logo a svg {
+  height: 3em;
+}
+
+.navbar {
+  height: 3.5em;
+  background-color: #fff;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.navbar #three-dots {
+  display: flex;
+  flex-direction: column;
+  width: 1em;
+  cursor: pointer;
+}
+.navbar #three-dots:hover div {
+  height: 6px;
+  width: 6px;
+  background-color: #ff1e3c;
+}
+.navbar #three-dots div {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #000;
+  transition: all 0.2s linear;
+}
+.navbar #three-dots div:nth-child(2) {
+  margin: 0.25em 0;
+}
+.navbar img {
+  height: 2em;
+  width: 10em;
+}
+.navbar #nav-items {
+  height: 100%;
+  display: flex;
+}
+.navbar #nav-items #item {
+  display: flex;
+  align-items: center;
+  height: 116%;
+  margin-top: -0.1em;
+  margin-left: 1em;
+  cursor: pointer;
+  transition: color 0.1s linear;
+}
+.navbar #nav-items #item:hover #nav-item-list {
+  visibility: visible;
+}
+.navbar #nav-items #item:hover #nav-item-list li {
+  max-height: 30vh;
+}
+.navbar #nav-items #item span {
+  font-weight: 500;
+}
+.navbar #nav-items #item span .bi {
+  margin-left: 0.3em;
+  transition: color 0.3s linear;
+}
+.navbar #nav-items #item ul {
+  position: absolute;
+  top: 4em;
+  margin-left: -2.5em;
+  padding: 0.5em;
+  border-radius: 3px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.navbar #nav-items #item ul li {
+  list-style: none;
+  margin: 1em;
+  font-weight: 300;
+  max-height: 0;
+  transition: max-height 1.2s linear;
+}
+.navbar #nav-items #item ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar #nav-items #item ul li a:hover {
+  color: #ff1e3c;
+}
+.navbar #nav-items #item ul li strong {
+  text-underline-offset: 0.3em;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #000;
+}
+.navbar #nav-items #item ul li strong:hover {
+  color: #000;
+}
+.navbar #nav-items #item:hover {
+  color: #ff1e3c;
+}
+.navbar #nav-items #item:hover .bi {
+  color: #ff1e3c;
+}
+.navbar #menu {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+.navbar #menu span {
+  align-items: center;
+  cursor: pointer;
+}
+.navbar #menu span i {
+  margin: 0 2em 0 0.5em;
+  color: #000;
+}
+
+#menu-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1021;
+  width: 30vw;
+  padding: 1em 2em 2em 2em;
+  background-color: #fff;
+  overflow-y: scroll;
+  bottom: 0;
+  margin-right: -600px;
+  transition: margin-right 0.4s linear;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera  */
+}
+#menu-bar::-webkit-scrollbar {
+  display: none;
+}
+#menu-bar .menu-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -0.4em;
+}
+#menu-bar .menu-heading img {
+  height: 2em;
+  width: 10em;
+}
+#menu-bar .menu-heading i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+#menu-bar .menu-heading i:hover {
+  color: #ff1e3c;
+}
+#menu-bar ul {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+#menu-bar ul li {
+  list-style: none;
+  padding: 1em 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+#menu-bar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+}
+#menu-bar ul li a:hover {
+  color: #ff1e3c;
+}
+
+#side-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1021;
+  width: 30vw;
+  padding: 2em;
+  background-color: #fff;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  margin-left: -600px;
+  margin-bottom: -3em;
+  transition: margin-left 0.4s linear;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera  */
+}
+#side-nav::-webkit-scrollbar {
+  display: none;
+}
+#side-nav .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side-nav .heading a {
+  text-decoration: none;
+  color: #a6a6a6;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+#side-nav .heading a:hover {
+  color: #ff1e3c;
+}
+#side-nav .heading a p {
+  margin: 0;
+}
+#side-nav .heading i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+#side-nav .heading i:hover {
+  color: #ff1e3c;
+}
+#side-nav .ea-play {
+  margin: 3em 0 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#side-nav .ea-play .background-img {
+  width: 100%;
+  height: 20em;
+  cursor: pointer;
+}
+#side-nav .ea-play div {
+  display: flex;
+  align-items: center;
+  height: 10em;
+}
+#side-nav .ea-play div #ea-logo {
+  position: relative;
+  cursor: pointer;
+  bottom: 15em;
+  height: 8em;
+  width: 6em;
+  transition: height 0.3s, width 0.3s linear;
+}
+#side-nav ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5em;
+  margin: -5em 0;
+  padding: 0;
+}
+#side-nav ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -3em 0;
+}
+#side-nav ul li .game {
+  height: 10em;
+  width: 100%;
+  cursor: pointer;
+}
+#side-nav ul li .game:hover + .game-logo .game-image {
+  height: 7em;
+  width: 6em;
+}
+#side-nav ul li .game:hover + .game-logo .fifa-game {
+  height: 6.5em;
+  width: 5.5em;
+}
+#side-nav ul li .game:hover + .game-logo .nfs-game {
+  height: 3em;
+  width: 6.5em;
+}
+#side-nav ul li .game:hover + .game-logo .apex-game {
+  height: 6.5em;
+  width: 5.5em;
+}
+#side-nav ul li .game:hover + .game-logo .sims-game {
+  height: 2.5em;
+  width: 5.5em;
+}
+#side-nav ul li .game-logo {
+  height: 6em;
+  display: flex;
+  align-items: center;
+}
+#side-nav ul li .game-logo img {
+  position: relative;
+  bottom: 8em;
+  height: 6em;
+  width: 5em;
+  transition: height 0.3s, width 0.3s linear;
+  cursor: pointer;
+}
+#side-nav ul li .game-logo img:hover {
+  height: 7em;
+  width: 6em;
+}
+#side-nav ul li .game-logo .nfs-game {
+  height: 2.5em;
+  width: 6em;
+}
+#side-nav ul li .game-logo .nfs-game:hover {
+  height: 3em;
+  width: 6.5em;
+}
+#side-nav ul li .game-logo .sims-game {
+  height: 2em;
+}
+#side-nav ul li .game-logo .sims-game:hover {
+  height: 2.5em;
+  width: 5.5em;
+}
+#side-nav ul li .game-logo .fifa-game:hover {
+  height: 6.5em;
+  width: 5.5em;
+}
+#side-nav ul li .game-logo .apex-game:hover {
+  height: 6.5em;
+  width: 5.5em;
+}
+
+main .main-poster {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 2em 2em 6em;
+  background-color: #e9fbf3;
+  color: #000;
+  height: auto;
+}
+main .main-poster .fifa-22-info {
+  width: 100%;
+  padding: 2em;
+  align-items: center;
+}
+main .main-poster .fifa-22-info h1 {
+  font-size: 2.5rem;
+}
+main .main-poster .fifa-22-info p {
+  font-size: 1.1rem;
+  margin: 0.5em 0;
+}
+main .main-poster .fifa-22-info div {
+  padding: 0.1em;
+  width: 9.2em;
+}
+main .main-poster .fifa-22-info div button {
+  border: 2px solid black;
+  padding: 0.8em;
+  border-radius: 3px;
+  background-color: #e9fbf3;
+}
+main .main-poster .fifa-22-info div button a {
+  text-decoration: none;
+  color: #000;
+}
+main .main-poster .fifa-22-info div:hover {
+  border: 2px solid black;
+  border-radius: 3px;
+}
+main .main-poster .fifa-22-info div:hover button {
+  border: none;
+}
+main .main-poster .fifa-22-poster img {
+  height: 100%;
+  width: 50vw;
+}
+main .featured-games {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+main .featured-games h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+main .featured-games ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em;
+  margin-bottom: 2em;
+  width: 70vw;
+}
+main .featured-games ul li {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  background-color: #595959;
+}
+main .featured-games ul li:hover img {
+  opacity: 0.6;
+}
+main .featured-games ul li:hover div img {
+  top: 35%;
+}
+main .featured-games ul li:hover div p, main .featured-games ul li:hover div img {
+  opacity: 1;
+}
+main .featured-games ul li img {
+  height: auto;
+  width: 100%;
+  opacity: 0.8;
+}
+main .featured-games ul li div img {
+  height: 6em;
+  width: 9em;
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 25%;
+  transition: top 0.2s linear;
+}
+main .featured-games ul li div img:nth-child(1) {
+  height: 4em;
+}
+main .featured-games ul li div p {
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  margin-top: 1em;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+main .featured-games ul .apex div img {
+  transition: none;
+}
+main .featured-games .latest-games {
+  display: flex;
+  margin: auto;
+  padding: 0.1em;
+  width: 9em;
+}
+main .featured-games .latest-games button {
+  border: 2px solid black;
+  padding: 0.8em;
+  border-radius: 3px;
+}
+main .featured-games .latest-games button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+main .featured-games .latest-games:hover {
+  border: 2px solid black;
+  border-radius: 3px;
+}
+main .featured-games .latest-games:hover button {
+  border: none;
+}
+main .latest-updates {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  /* ul */
+}
+main .latest-updates h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+main .latest-updates .categories {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 0;
+  padding: 0 1em;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+main .latest-updates .categories::-webkit-scrollbar {
+  display: none;
+}
+main .latest-updates .categories li {
+  list-style: none;
+  padding: 1em 0;
+}
+main .latest-updates .categories li:nth-child(1) {
+  background-color: #cccccc;
+  border-bottom: 2px solid #ff1e3c;
+}
+main .latest-updates .categories li:hover {
+  background-color: #cccccc;
+}
+main .latest-updates .categories li a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 1em;
+  border-right: 1px solid #999999;
+}
+main .latest-updates .articles ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-gap: 1.2em;
+  margin: 2em auto;
+  width: 70vw;
+}
+main .latest-updates .articles ul li {
+  list-style: none;
+  height: auto;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.3s linear, box-shadow 0.3s linear;
+}
+main .latest-updates .articles ul li:hover {
+  bottom: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main .latest-updates .articles ul li img {
+  width: 100%;
+}
+main .latest-updates .articles ul li section {
+  padding: 1em;
+}
+main .latest-updates .articles ul li section div span {
+  color: #ff1e3c;
+  margin-right: 1em;
+  font-size: 0.9rem;
+}
+main .latest-updates .articles ul li section div strong {
+  font-size: 0.9rem;
+}
+main .latest-updates .articles ul li section h2 {
+  font-size: 1.4rem;
+  margin: 0.5em 0;
+}
+main .latest-updates .articles ul li section p {
+  margin: 0;
+}
+main .latest-updates .articles .read-more {
+  display: flex;
+  margin: auto;
+  padding: 0.1em;
+  width: 7.5em;
+}
+main .latest-updates .articles .read-more button {
+  border: 2px solid black;
+  padding: 0.8em;
+  border-radius: 3px;
+}
+main .latest-updates .articles .read-more button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+main .latest-updates .articles .read-more:hover {
+  border: 2px solid black;
+  border-radius: 3px;
+}
+main .latest-updates .articles .read-more:hover button {
+  border: none;
+}
+main .ea-play {
+  margin-top: 2em;
+  width: 100%;
+}
+main .ea-play .bg-img {
+  height: 30em;
+  width: 100%;
+  filter: brightness(0.5);
+}
+main .ea-play .ea-play-info {
+  position: relative;
+  margin-top: -28em;
+  padding: 0 2em;
+}
+main .ea-play .ea-play-info img {
+  height: 10em;
+  width: 15em;
+}
+main .ea-play .ea-play-info p {
+  color: #fff;
+  position: relative;
+  bottom: 2em;
+  width: 50vw;
+}
+main .ea-play .ea-play-info .join-now {
+  position: relative;
+  bottom: 2em;
+  padding: 0.1em;
+  width: 6.8em;
+}
+main .ea-play .ea-play-info .join-now button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 0.8em;
+  border-radius: 3px;
+}
+main .ea-play .ea-play-info .join-now button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+main .ea-play .ea-play-info .join-now:hover {
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+main .ea-play .ea-play-info .join-now:hover button {
+  border: none;
+}
+main .ea-play .parental-control {
+  background-color: #6cabdd;
+  padding: 1.5em;
+  height: auto;
+}
+main .ea-play .parental-control div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .ea-play .parental-control h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+main .ea-play .parental-control .learn-more {
+  padding: 0.1em;
+  width: 7em;
+}
+main .ea-play .parental-control .learn-more button {
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+main .ea-play .parental-control .learn-more button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+main .ea-play .parental-control .learn-more:hover {
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+main .ea-play .parental-control .learn-more:hover button {
+  border: none;
+}
+
+footer {
+  margin-top: 10.4em;
+}
+footer .footer1 {
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0 2em 0;
+}
+footer .footer1 ul {
+  display: flex;
+  padding: 0;
+}
+footer .footer1 ul li {
+  list-style: none;
+}
+footer .footer1 ul li a {
+  text-decoration: none;
+  margin: 0;
+  margin-right: 1.5em;
+  color: #000;
+}
+footer .footer1 ul li a:hover {
+  color: #ff1e3c;
+}
+footer .footer1 .social-handles {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer1 .social-handles p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+footer .footer1 .social-handles .social-links {
+  margin: 0.5em 0;
+}
+footer .footer1 .social-handles .social-links ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+footer .footer1 .social-handles .social-links ul li {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+footer .footer1 .social-handles .social-links ul li a .bi {
+  font-size: 1.5em;
+  transition: font-size 0.2s linear;
+}
+footer .footer1 .social-handles .social-links ul li a .bi:hover {
+  font-size: 2em;
+}
+footer .footer1 .social-handles .social-links ul li a:hover {
+  color: #000;
+}
+footer .footer2 div {
+  display: flex;
+  align-items: center;
+}
+footer .footer2 img {
+  height: 3em;
+  width: 3em;
+  margin-right: 2em;
+  cursor: pointer;
+}
+footer .footer2 ul {
+  display: flex;
+  margin: 0;
+  padding: 2.5em 0;
+  align-items: center;
+}
+footer .footer2 ul li {
+  list-style: none;
+  margin-right: 1.5em;
+}
+footer .footer2 ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+footer .footer2 ul li a:hover {
+  color: #ff1e3c;
+}
+
+@media (min-width: 1100px) and (max-width: 1350px) {
+  #side-nav {
+    width: 40vw;
+  }
+}
+@media (max-width: 1100px) {
+  #side-nav {
+    width: 50vw;
+  }
+
+  main .featured-games ul {
+    grid-template-columns: auto auto;
+    grid-gap: 2em;
+  }
+  main .latest-updates .articles ul {
+    grid-template-columns: auto auto;
+    grid-gap: 2em;
+  }
+  main .ea-play .ea-play-info {
+    margin-top: -29em;
+  }
+
+  footer .footer1 {
+    margin-top: -1.2em;
+  }
+}
+@media (max-width: 1000px) {
+  .user-navigation .profile .profile-info a, .user-navigation .help .profile-info a {
+    flex-direction: row;
+  }
+  .user-navigation .profile .help-info .help-articles a, .user-navigation .help .help-info .help-articles a {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    margin: 1em 3em;
+  }
+  .user-navigation .profile .help-info .help-articles a img, .user-navigation .help .help-info .help-articles a img {
+    margin: 0;
+    margin-right: 1em;
+  }
+
+  main .main-poster {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2em;
+  }
+  main .main-poster .fifa-22-info {
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  main .main-poster .fifa-22-poster img {
+    height: 100%;
+    width: 80vw;
+  }
+  main .latest-updates .articles ul {
+    width: 90vw;
+  }
+  main .ea-play .ea-play-info img {
+    height: 9em;
+    width: 12em;
+  }
+
+  footer .footer1 ul {
+    margin: auto;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em;
+    justify-content: start;
+  }
+}
+@media (max-width: 900px) {
+  .navbar #nav-items {
+    display: none;
+  }
+  .navbar #menu {
+    visibility: visible;
+  }
+}
+@media (max-width: 800px) {
+  #side-nav, #menu-bar {
+    width: 60vw;
+  }
+
+  main .featured-games ul {
+    width: 90vw;
+  }
+
+  main .latest-updates .categories {
+    justify-content: flex-start;
+  }
+
+  main .ea-play .ea-play-info {
+    margin-top: -32em;
+  }
+  main .ea-play .ea-play-info p {
+    width: 100%;
+  }
+  main .ea-play .parental-control {
+    text-align: center;
+  }
+  main .ea-play .parental-control div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .ea-play .parental-control div h2 {
+    margin-bottom: 1em;
+  }
+
+  footer .footer1 ul {
+    grid-template-columns: auto auto;
+  }
+  footer .footer2 div {
+    align-items: normal;
+    flex-direction: column;
+    padding: 1.5em 1em;
+  }
+  footer .footer2 div ul {
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: start;
+    grid-gap: 1em;
+  }
+}
+@media (max-width: 700px) {
+  main .featured-games h2 {
+    font-size: 2.1rem;
+  }
+  main .featured-games ul {
+    width: 90vw;
+    grid-template-columns: auto;
+    margin: 0;
+    padding: 0;
+  }
+  main .featured-games ul .apex {
+    display: none;
+  }
+  main .featured-games ul li div img {
+    left: none;
+    height: auto;
+    width: 50%;
+  }
+  main .featured-games ul li div p {
+    font-size: 1.2rem;
+  }
+  main .featured-games .latest-games {
+    margin-top: 2em;
+  }
+  main .latest-updates .articles ul {
+    grid-template-columns: auto;
+    grid-gap: 1em;
+    width: 70vw;
+    padding: 0;
+    text-align: center;
+  }
+  main .latest-updates .articles ul li:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  main .latest-updates .articles ul li img {
+    display: none;
+  }
+  main .latest-updates .articles ul li section div {
+    display: flex;
+    flex-direction: column;
+  }
+  main .latest-updates .articles ul li section div span {
+    margin: 0;
+  }
+  main .latest-updates .articles ul li section p {
+    display: none;
+  }
+  main .latest-updates h2 {
+    font-size: 2.1rem;
+  }
+  main .ea-play .parental-control h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .user-navigation .profile svg:hover, .user-navigation .help svg:hover, .user-navigation .logo svg:hover {
+    fill: #a3a3a3;
+  }
+  .user-navigation .profile .profile-info, .user-navigation .help .profile-info, .user-navigation .logo .profile-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-navigation .profile .profile-info a, .user-navigation .help .profile-info a, .user-navigation .logo .profile-info a {
+    width: 12em;
+    margin: 0;
+  }
+  .user-navigation .profile .profile-info a:hover, .user-navigation .help .profile-info a:hover, .user-navigation .logo .profile-info a:hover {
+    margin: 0;
+  }
+  .user-navigation .profile .help-info p, .user-navigation .help .help-info p, .user-navigation .logo .help-info p {
+    text-align: center;
+  }
+  .user-navigation .profile .help-info .help-articles, .user-navigation .help .help-info .help-articles, .user-navigation .logo .help-info .help-articles {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: start;
+    margin: 0.7em 0;
+  }
+  .user-navigation .profile .help-info .help-articles a, .user-navigation .help .help-info .help-articles a, .user-navigation .logo .help-info .help-articles a {
+    flex-direction: row;
+    margin: 0.5em;
+  }
+  .user-navigation .profile .help-info .help-articles a:hover, .user-navigation .help .help-info .help-articles a:hover, .user-navigation .logo .help-info .help-articles a:hover {
+    margin: 0.5em;
+  }
+}
+@media (max-width: 600px) {
+  main .main-poster .fifa-22-info img {
+    height: auto;
+    width: 60%;
+  }
+  main .main-poster .fifa-22-info h1 {
+    font-size: 2.1rem;
+  }
+  main .main-poster .fifa-22-info p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1em;
+    margin: 0.5em 0;
+  }
+  main .latest-updates .articles ul {
+    margin-top: 0;
+  }
+  main .latest-updates .articles ul li article section {
+    grid-template-columns: auto;
+  }
+  main .latest-updates .articles ul li article section h2 {
+    font-size: 1.2rem;
+  }
+  main .ea-play .parental-control h2 {
+    font-size: 1.4rem;
+  }
+  main .ea-play .ea-play-info {
+    margin-top: -33em;
+    padding: 0 1em;
+  }
+}
+@media (max-width: 550px) {
+  #side-nav, #menu-bar {
+    width: 100vw;
+  }
+
+  main .ea-play .ea-play-info p {
+    font-size: 0.9rem;
+  }
+  main .ea-play .parental-control h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 500px) {
+  main .featured-games h2, main .latest-updates h2 {
+    font-size: 1.8rem;
+  }
+  main .latest-updates .categories li {
+    padding: 1em 0;
+  }
+  main .latest-updates .categories li a {
+    padding: 0 0.5em;
+  }
+  main .latest-updates .articles {
+    width: 100vw;
+    margin: 2em 0;
+  }
+  main .latest-updates .articles ul li section {
+    width: 80vw;
+  }
+  main .ea-play .parental-control h2 {
+    font-size: 1.2rem;
+  }
+
+  footer .footer2 div ul {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 450px) {
+  .user-navigation .profile .help-info p, .user-navigation .help .help-info p {
+    margin: 0;
+  }
+  .user-navigation .profile .help-info .help-articles a, .user-navigation .help .help-info .help-articles a {
+    flex-direction: row;
+  }
+
+  main .main-poster .fifa-22-info {
+    width: 100vw;
+    padding: 2em 0 0 0;
+  }
+  main .main-poster .fifa-22-info h1 {
+    font-size: 1.8rem;
+  }
+  main .ea-play .parental-control h2 {
+    font-size: 1.1rem;
+  }
+  main .ea-play .ea-play-info {
+    margin-top: -32.5em;
+  }
+
+  footer .footer1 ul {
+    grid-gap: 1em 0;
+  }
+}
+@media (max-width: 400px) {
+  footer .footer1 ul {
+    grid-template-columns: auto;
+  }
+  footer .footer2 div ul {
+    grid-template-columns: auto auto;
+    grid-gap: 0.5em;
+  }
+}
+@media (max-width: 350px) {
+  main .featured-games h2, .latest-updates h2 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1080px) and (max-width: 1100px) {
+  footer {
+    margin-top: 12.5em;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1080px) {
+  footer {
+    margin-top: 11.1em;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  footer {
+    margin-top: 12em;
+  }
+}
+@media (min-width: 620px) and (max-width: 800px) {
+  footer {
+    margin-top: 16.5em;
+  }
+}
+@media (min-width: 600px) and (max-width: 620px) {
+  footer {
+    margin-top: 15em;
+  }
+}
+@media (min-width: 550px) and (max-width: 600px) {
+  footer {
+    margin-top: 16.2em;
+  }
+}
+@media (min-width: 535px) and (max-width: 550px) {
+  footer {
+    margin-top: 18em;
+  }
+}
+@media (min-width: 450px) and (max-width: 535px) {
+  footer {
+    margin-top: 16.5em;
+  }
+}
+@media (min-width: 370px) and (max-width: 450px) {
+  footer {
+    margin-top: 15.5em;
+  }
+}
+@media (min-width: 360px) and (max-width: 365px) {
+  footer {
+    margin-top: 15em;
+  }
+}
+@media (min-width: 300px) and (max-width: 360px) {
+  footer {
+    margin-top: 15em;
+  }
+}
