@@ -6,6 +6,11 @@ This project is a clone of [ea.com](https://ea.com/) starting page.
 ## Visit Site Here -
 [click here](https://RajeshV-Alluri.github.io/EA-Clone)
 
+## Preview -
+<img src="https://user-images.githubusercontent.com/63069749/138856983-195ca9c0-aae7-4554-9070-61aa3dacfdda.png">
+
+<img src="https://user-images.githubusercontent.com/63069749/138857279-c9b24ea6-f323-498e-acde-a6372d2e965d.jpg" height=30% width=50%>
+
 ## Tools & Technologies Used -
 *HTML5,
 CSS3,
