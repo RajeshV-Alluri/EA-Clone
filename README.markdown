@@ -4,7 +4,7 @@ A Pen created on CodePen.io. Original URL: [https://codepen.io/rajeshv-alluri/pe
 This project is a clone of [ea.com](https://ea.com/) starting page.
 
 ## Visit Site Here -
-[click here](https://RajeshV-Alluri.github.io/EA-Clone)
+[click here](https://ea-clone.netlify.app/)
 
 ## Preview -
 <img src="https://user-images.githubusercontent.com/63069749/138856983-195ca9c0-aae7-4554-9070-61aa3dacfdda.png">
